@@ -1,0 +1,65 @@
+{
+  "projectType": "webapp",
+  "assertions": [
+    {
+      "name": "typescript-no-emit",
+      "kind": "process",
+      "command": "npx",
+      "args": ["tsc", "--noEmit"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "lint-fireworks",
+      "kind": "process",
+      "command": "npx",
+      "args": [
+        "eslint",
+        "src/App.tsx",
+        "src/components/scene1/GiftBox.tsx",
+        "src/components/scene1/useAudioLayer.ts",
+        "src/components/journey/CakeSlide.tsx",
+        "src/components/journey/CakeSlide.test.tsx",
+        "src/components/journey/JourneyDeck.tsx",
+        "src/components/journey/Fireworks.tsx",
+        "src/components/journey/Fireworks.test.tsx",
+        "src/components/journey/MusicPlayer.tsx",
+        "src/components/journey/MusicPlayer.test.tsx",
+        "src/components/journey/SlideShell.tsx",
+        "src/components/scene1/birthdaySounds.ts"
+      ],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "production-build",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "build"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": ["test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "dev-server-serves-home",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--host", "127.0.0.1", "--port", "5174", "--strictPort"],
+      "url": "http://127.0.0.1:5174/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    }
+  ]
+}

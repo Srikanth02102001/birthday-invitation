@@ -1,0 +1,218 @@
+{
+  "planHash": "cbaf0961c265c7bc44bad09fa27ae6a7266b042b07e474480c7d4bb5f3597a82",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-03T06:06:04.6809076Z",
+  "retryCount": 1,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 0,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "typescript-no-emit",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "",
+        "durationMs": 22406
+      },
+      {
+        "name": "lint-fireworks",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "",
+        "durationMs": 16295
+      },
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "npm warn Unknown env config \u0022scripts-prepend-node-path\u0022. This will stop working in the next major version of npm. See \u0060npm help npmrc\u0060 for supported config options.\r\n\r\n\u003E build\r\n\u003E vite build\r\n\r\n\u001B[36mvite v8.3.5 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u2713 488 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndist/index.html                            1.23 kB \u2502 gzip:   0.59 kB\r\ndist/assets/JourneyDeck-B0UxAM6F.css       9.80 kB \u2502 gzip:   1.83 kB\r\ndist/assets/index-Wx1d_Ahp.css           101.59 kB \u2502 gzip:  16.28 kB\r\ndist/assets/confetti.module-D2UmBLOm.js   10.57 kB \u2502 gzip:   4.20 kB\r\ndist/assets/GiftBox-DUH7qBPp.js           11.16 kB \u2502 gzip:   3.48 kB\r\ndist/assets/JourneyDeck-C1BlRdjW.js      143.82 kB \u2502 gzip:  43.16 kB\r\ndist/assets/index-Ced3Fpk4.js            438.21 kB \u2502 gzip: 143.35 kB\r\n\r\n\u001B[32m\u2713 built in 1.36s\u001B[39m\r\n",
+        "durationMs": 4928
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "npm warn Unknown env config \u0022scripts-prepend-node-path\u0022. This will stop working in the next major version of npm. See \u0060npm help npmrc\u0060 for supported config options.\r\n\r\n\u003E test\r\n\u003E vitest run\r\n\r\n\r\n RUN  v5.0.5 D:/MS/starlight-birthday-reveal-main\r\n\r\n\r\n Test Files  4 passed (4)\r\n      Tests  5 passed (5)\r\n   Start at  11:35:57\r\n   Duration  3.37s (import 94%, transform 3%, tests 2%, worker 1%)\r\n\r\n",
+        "durationMs": 7017,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 5,
+          "testsPassed": 5,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "dev-server-serves-home",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022en\u0022\u003E\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0, viewport-fit=cover\u0022 /\u003E\n    \u003Cmeta\n      name=\u0022description\u0022\n      content=\u0022A little starlit surprise made especially for Manasa \u2014 stars, a gift to unwrap, and a birthday wish.\u0022\n    /\u003E\n    \u003Cmeta property=\u0022og:title\u0022 content=\u0022Happy Birthday, Manasa\u0022 /\u003E\n    \u003Cmeta property=\u0022og:description\u0022 content=\u0022Made especially for you.\u0022 /\u003E\n    \u003Cmeta property=\u0022og:type\u0022 content=\u0022website\u0022 /\u003E\n    \u003Cmeta name=\u0022twitter:card\u0022 content=\u0022summary_large_image\u0022 /\u003E\n    \u003Ctitle\u003EHappy Birthday, Manasa\u003C/title\u003E\n    \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.googleapis.com\u0022 /\u003E\n    \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.gstatic.com\u0022 crossorigin /\u003E\n    \u003Clink\n      rel=\u0022stylesheet\u0022\n      href=\u0022https://fonts.googleapis.com/css2?family=Cormorant\u002BGaramond:ital,wght@0,300;0,400;0,500;1,300\u0026family=Jost:wght@200;300;400\u0026display=swap\u0022\n    /\u003E\n    \u003Clink rel=\u0022icon\u0022 href=\u0022/favicon.ico\u0022 type=\u0022image/x-icon\u0022 /\u003E\n  \u003C/head\u003E\n  \u003Cbody\u003E\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.tsx\u0022\u003E\u003C/script\u003E\n  \u003C/body\u003E\n\u003C/html\u003E\n--- server output ---\nnpm warn Unknown env config \u0022scripts-prepend-node-path\u0022. This will stop working in the next major version of npm. See \u0060npm help npmrc\u0060 for supported config options.\r\n\r\n\u003E dev\r\n\u003E vite dev --host 127.0.0.1 --port 5174 --strictPort\r\n\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v8.3.5\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m1500\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5174\u001B[22m/\u001B[39m\r\n",
+        "durationMs": 3480
+      }
+    ],
+    "executions": [
+      {
+        "source": "typescript-no-emit",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npx.CMD",
+        "args": [
+          "tsc",
+          "--noEmit"
+        ],
+        "cwd": "D:\\MS\\starlight-birthday-reveal-main",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": null,
+        "nodeVersion": null,
+        "packageManager": null,
+        "packageManagerExecutable": null,
+        "packageManagerVersion": null,
+        "cleanup": {
+          "RootProcessId": 16396,
+          "Completed": true,
+          "ProcessesObserved": 7,
+          "ProcessesTerminated": 0,
+          "Failure": null
+        }
+      },
+      {
+        "source": "lint-fireworks",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npx.CMD",
+        "args": [
+          "eslint",
+          "src/App.tsx",
+          "src/components/journey/CakeSlide.tsx",
+          "src/components/journey/CakeSlide.test.tsx",
+          "src/components/journey/JourneyDeck.tsx",
+          "src/components/journey/Fireworks.tsx",
+          "src/components/journey/Fireworks.test.tsx",
+          "src/components/journey/MusicPlayer.tsx",
+          "src/components/journey/SlideShell.tsx"
+        ],
+        "cwd": "D:\\MS\\starlight-birthday-reveal-main",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": null,
+        "nodeVersion": null,
+        "packageManager": null,
+        "packageManagerExecutable": null,
+        "packageManagerVersion": null,
+        "cleanup": {
+          "RootProcessId": 1228,
+          "Completed": true,
+          "ProcessesObserved": 7,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "D:\\MS\\starlight-birthday-reveal-main",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v24.15.0",
+        "packageManager": "npm",
+        "packageManagerExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "packageManagerVersion": "11.12.1",
+        "cleanup": {
+          "RootProcessId": 27312,
+          "Completed": true,
+          "ProcessesObserved": 10,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "args": [
+          "test"
+        ],
+        "cwd": "D:\\MS\\starlight-birthday-reveal-main",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v24.15.0",
+        "packageManager": "npm",
+        "packageManagerExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "packageManagerVersion": "11.12.1",
+        "cleanup": {
+          "RootProcessId": 1572,
+          "Completed": true,
+          "ProcessesObserved": 14,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "dev-server-serves-home",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "5174",
+          "--strictPort"
+        ],
+        "cwd": "D:\\MS\\starlight-birthday-reveal-main",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v24.15.0",
+        "packageManager": "npm",
+        "packageManagerExecutable": "C:\\Program Files\\nodejs\\npm.cmd",
+        "packageManagerVersion": "11.12.1",
+        "cleanup": {
+          "RootProcessId": 17264,
+          "Completed": true,
+          "ProcessesObserved": 10,
+          "ProcessesTerminated": 5,
+          "Failure": null
+        }
+      }
+    ]
+  }
+}
