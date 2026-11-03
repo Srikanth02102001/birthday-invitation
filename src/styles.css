@@ -170,7 +170,7 @@
 
 @media (max-width: 400px) {
   .journey-slide-frame section {
-    background-color: color-mix(in oklab, var(--starlight) 4%, transparent);
+    background-color: color-mix(in oklab, var(--starlight) 2%, transparent);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
   }

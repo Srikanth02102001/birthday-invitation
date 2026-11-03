@@ -7,8 +7,8 @@ export function WishesSlide() {
   const [noteOpen, setNoteOpen] = useState(false);
 
   return (
-    <div className="flex h-full w-full items-center justify-center px-6">
-      <div className="w-full max-w-md text-center">
+    <div className="flex h-full w-full items-start justify-center overflow-y-auto overscroll-contain px-4 py-6 sm:items-center sm:px-6">
+      <div className="w-full max-w-md shrink-0 py-6 text-center">
         <motion.h2
           initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
