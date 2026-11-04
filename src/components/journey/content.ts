@@ -104,7 +104,7 @@ export const myEfforts = {
   paragraphs: [
     "Efforts gurinchi clear ga chepte Thidthav so koncham chepthuuna 😙(whistle)",
     "I started making this on August 14, 2026. Instead of letting my free time slip away, I saved a little time each day to make something special for you.",
-    "last time anav ga Chatgpt ichindhi ani This I gave this my all because you deserve to know how much I value you.",
+    "last time anav ga Chatgpt ichindhi ani This time I gave this my all because you deserve to know how much I value you.",
     "Maybe This looks so simple but I put my heart and soul into it,.",
     "Last time Maa Frnd ki website cheyu strom ante Free ga chedham le mi frnd ey ga ana, ledhu ni pocket money ana avthai money thisuko anav that discribes you as my friend",
     "Nenu Gift ivalsindhi but nuvu odhu antav so I made this website for you. I hope you like my efforts this time .",
