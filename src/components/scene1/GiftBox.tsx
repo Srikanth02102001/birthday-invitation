@@ -359,13 +359,7 @@ export function GiftBox({
                 opened ? { duration: 0.5 } : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }
               }
             />
-            <span
-              className="absolute left-1/2 top-[38%] h-[27%] w-[24%] -translate-x-1/2 rounded-[35%]"
-              style={{
-                background: "radial-gradient(circle at 35% 30%, #fff7db, #dbad61 52%, #8d5d2d)",
-                boxShadow: "0 2px 5px rgba(0,0,0,.38), 0 0 10px rgba(255,225,164,.48)",
-              }}
-            />
+           
           </motion.div>
         </motion.div>
 
@@ -433,9 +427,7 @@ export function GiftBox({
                 transition: "transform 400ms ease-out",
               }}
             />
-            {!shooting && (
-              <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap rounded-full border border-starlight/15 bg-night/70 px-3 py-1 font-sans text-[0.58rem] font-light tracking-[0.24em] text-starlight/80 uppercase backdrop-blur-sm"></span>
-            )}
+          
           </motion.button>
         )}
       </AnimatePresence>

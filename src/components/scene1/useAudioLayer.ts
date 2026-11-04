@@ -80,19 +80,27 @@ export function useBirthdayAudio(started: boolean) {
     birthdayRef.current?.mute(muted);
   }, [muted]);
 
-  const prepareForShot = useCallback(() => {
+  const stopPiano = useCallback(() => {
     const piano = pianoRef.current;
-    if (!piano || birthdayStartedRef.current) return;
+    if (!piano) return;
 
     if (pianoStopTimerRef.current !== null) {
       window.clearTimeout(pianoStopTimerRef.current);
+      pianoStopTimerRef.current = null;
     }
-    piano.fade(piano.volume(), 0, 300);
+
+    piano.fade(piano.volume(), 0, 250);
     pianoStopTimerRef.current = window.setTimeout(() => {
       piano.stop();
       pianoStopTimerRef.current = null;
-    }, 350);
+    }, 300);
   }, []);
+
+  const prepareForShot = useCallback(() => {
+    const piano = pianoRef.current;
+    if (!piano || birthdayStartedRef.current) return;
+    stopPiano();
+  }, [stopPiano]);
 
   const startBirthdaySong = useCallback(() => {
     const piano = pianoRef.current;
@@ -100,11 +108,9 @@ export function useBirthdayAudio(started: boolean) {
     if (!birthday || birthdayStartedRef.current) return;
 
     birthdayStartedRef.current = true;
-    if (pianoStopTimerRef.current !== null) {
-      window.clearTimeout(pianoStopTimerRef.current);
-      pianoStopTimerRef.current = null;
-    }
+    stopPiano();
     piano?.stop();
+    birthday.stop();
     setAudioError(null);
     setTrack("birthday");
 
@@ -119,7 +125,7 @@ export function useBirthdayAudio(started: boolean) {
     } else {
       birthday.once("load", playBirthday);
     }
-  }, []);
+  }, [stopPiano]);
 
   const toggleMuted = useCallback(() => setMuted((current) => !current), []);
 

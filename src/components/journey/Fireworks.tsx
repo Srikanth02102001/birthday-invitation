@@ -28,7 +28,7 @@ const LAST_BURST_END_SECONDS = Math.max(
 export const FIREWORKS_DURATION_MS = Math.ceil((LAST_BURST_END_SECONDS + 0.5) * 1000);
 
 /**
- * A sustained sequence of firework shots followed by a centered birthday-name reveal.
+ * A sustained sequence of firework shots followed by a cake-positioned birthday-name reveal.
  */
 export function Fireworks({ active, onComplete }: { active: boolean; onComplete: () => void }) {
   useEffect(() => {
@@ -140,7 +140,7 @@ export function Fireworks({ active, onComplete }: { active: boolean; onComplete:
       <h1
         aria-live="polite"
         aria-atomic="true"
-        className="birthday-name-reveal absolute left-1/2 top-1/2 z-10 m-0 text-center font-serif font-light leading-none"
+        className="birthday-name-reveal absolute left-1/2 top-[58%] z-10 m-0 text-center font-serif font-light leading-none"
         style={{
           width: "calc(100vw - 2rem)",
           maxWidth: "52rem",
