@@ -79,7 +79,7 @@ export function WishesSlide() {
               className="mt-6 rounded-2xl border border-starlight/10 bg-starlight/[0.04] px-5 py-4"
             >
               <p className="font-serif text-lg leading-relaxed text-starlight/90">
-                Manasa, I hope every year brings you the same warmth and happiness you bring to the
+                Manasa, I hope every year brings you the happiness you bring to the
                 people around you. May it be full of little adventures, reasons to smile, and dreams
                 coming true. And whenever a day feels difficult, remember I am always here cheering
                 you on. Stay strong, keep smiling, and keep being wonderfully you. ❤️

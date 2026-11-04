@@ -102,11 +102,13 @@ export const wishes = [
 export const myEfforts = {
   startDate: "August 14, 2026",
   paragraphs: [
+    "Efforts gurinchi clear ga chepte Thidthav so koncham chepthuuna 😙(whistle)",
     "I started making this on August 14, 2026. Instead of letting my free time slip away, I saved a little time each day to make something special for you.",
-    "I may not always feel confident about my communication,especially in interviews, btw Im good in this subject but I gave this my all because you deserve to know how much I value you.",
-    "Manasa, mi frnd website nenu cheyalsindhi kadha haha",
-    "Maybe Nenu Gift ivalsindhi but nuvu odhu antav so I made this website for you. I hope you like my efforts this time .",
+    "last time anav ga Chatgpt ichindhi ani This I gave this my all because you deserve to know how much I value you.",
+    "Maybe This looks so simple but I put my heart and soul into it,.",
+    "Last time Maa Frnd ki website cheyu strom ante Free ga chedham le mi frnd ey ga ana, ledhu ni pocket money ana avthai money thisuko anav that discribes you as my friend",
+    "Nenu Gift ivalsindhi but nuvu odhu antav so I made this website for you. I hope you like my efforts this time .",
     "And Promise ga chepthunna You never find this website anywhere else, because I made it just for you.",
-    "You said how much respect Mahesh gets in his field. Manasa, I hope I can earn that kind of respect too. I turned down one job and chose another opportunity, and I have an interview in December. Just pray for me, okay? :)",
+    "I turned down one job and chose another opportunity, and I have an interview in December. Just pray for me, okay? :)",
   ],
 };
