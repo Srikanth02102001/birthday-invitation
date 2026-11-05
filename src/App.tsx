@@ -8,7 +8,11 @@ import { TapToBegin } from "@/components/scene1/TapToBegin";
 import { Petals } from "@/components/scene1/Petals";
 import { useBirthdayAudio } from "@/components/scene1/useAudioLayer";
 
-const JourneyDeck = lazy(() => import("@/components/journey/JourneyDeck"));
+const JourneyDeck = lazy(() =>
+  import("@/components/journey/JourneyDeck").then(({ JourneyDeck }) => ({
+    default: JourneyDeck,
+  })),
+);
 
 type Phase = "idle" | "whisper" | "bloom" | "name" | "gift" | "opened" | "finale" | "journey";
 
@@ -199,15 +203,7 @@ function BirthdayExperience() {
       </div>
 
       {phase === "journey" && (
-        <Suspense
-          fallback={
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-              <p className="font-sans text-xs tracking-[0.3em] text-starlight/70 uppercase">
-                Opening your memories
-              </p>
-            </div>
-          }
-        >
+        <Suspense fallback={null}>
           <JourneyDeck muted={muted} />
         </Suspense>
       )}

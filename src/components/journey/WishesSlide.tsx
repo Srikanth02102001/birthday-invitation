@@ -79,10 +79,10 @@ export function WishesSlide() {
               className="mt-6 rounded-2xl border border-starlight/10 bg-starlight/[0.04] px-5 py-4"
             >
               <p className="font-serif text-lg leading-relaxed text-starlight/90">
-                Manasa, I hope every year brings you the happiness you bring to the
-                people around you. May it be full of little adventures, reasons to smile, and dreams
-                coming true. And whenever a day feels difficult, remember I am always here cheering
-                you on. Stay strong, keep smiling, and keep being wonderfully you. ❤️
+                Manasa, I hope every year brings you the happiness you bring to the people around
+                you. May it be full of little adventures, reasons to smile, and dreams coming true.
+                And whenever a day feels difficult, remember I am always here cheering you on. Stay
+                strong, keep smiling, and keep being wonderfully you. ❤️
               </p>
               <button
                 type="button"
@@ -104,9 +104,9 @@ export function WishesSlide() {
                     transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden font-serif text-base leading-relaxed text-starlight/75"
                   >
-                  Its okey to feel I'm no ones favorite, no ones priority, because you can 
-                  be someones favorite, priority, e oka roju ni kopam pakkana petu,
-                  ni badha endhi strom anaku haha
+                    Its okey to feel I'm no ones favorite, no ones priority, because you can be
+                    someones favorite, priority, e oka roju ni kopam pakkana petu, ni badha endhi
+                    strom anaku haha
                   </motion.p>
                 )}
               </AnimatePresence>
