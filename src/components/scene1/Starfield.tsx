@@ -15,6 +15,8 @@ const COLORS: Record<Star["hue"], string> = {
   gold: "255, 214, 153",
   rose: "255, 196, 199",
 };
+const MAX_STAR_RADIUS = 1.6;
+const MAX_STAR_GLOW_RADIUS = 7;
 
 function makeStars(width: number, height: number): Star[] {
   const count = Math.min(650, Math.max(220, Math.round((width * height) / 1900)));
@@ -24,7 +26,7 @@ function makeStars(width: number, height: number): Star[] {
     stars.push({
       x: Math.random(),
       y: Math.random(),
-      r: 0.45 + Math.random() ** 2 * 1.15,
+      r: Math.min(MAX_STAR_RADIUS, 0.45 + Math.random() ** 2 * 1.15),
       base: 0.5 + Math.random() * 0.2,
       appearAt: 1 - Math.random() ** 1.8,
       hue: roll > 0.985 ? "rose" : roll > 0.94 ? "gold" : "white",
@@ -85,16 +87,17 @@ export function Starfield({ reveal }: { reveal: number }) {
         const x = s.x * width;
         const y = s.y * height;
         const alpha = Math.max(0, Math.min(1, s.base * fade));
-        const radius = s.r;
+        const radius = Math.max(0.45, Math.min(s.r, MAX_STAR_RADIUS));
+        const glowRadius = Math.min(radius * 5, MAX_STAR_GLOW_RADIUS);
         const color = COLORS[s.hue];
 
-        const glow = ctx.createRadialGradient(x, y, 0, x, y, radius * 5);
+        const glow = ctx.createRadialGradient(x, y, 0, x, y, glowRadius);
         glow.addColorStop(0, `rgba(${color}, ${alpha})`);
         glow.addColorStop(0.35, `rgba(${color}, ${alpha * 0.28})`);
         glow.addColorStop(1, `rgba(${color}, 0)`);
         ctx.fillStyle = glow;
         ctx.beginPath();
-        ctx.arc(x, y, radius * 5, 0, Math.PI * 2);
+        ctx.arc(x, y, glowRadius, 0, Math.PI * 2);
         ctx.fill();
 
         ctx.fillStyle = `rgba(${color}, ${alpha})`;

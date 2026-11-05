@@ -359,7 +359,6 @@ export function GiftBox({
                 opened ? { duration: 0.5 } : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }
               }
             />
-           
           </motion.div>
         </motion.div>
 
@@ -421,13 +420,13 @@ export function GiftBox({
               src="/ump45.webp"
               alt=""
               draggable={false}
+              fetchPriority="high"
               className="h-full w-full select-none object-contain drop-shadow-[0_0_18px_rgba(255,190,90,0.42)]"
               style={{
                 transform: `rotate(${rotation}deg)`,
                 transition: "transform 400ms ease-out",
               }}
             />
-          
           </motion.button>
         )}
       </AnimatePresence>

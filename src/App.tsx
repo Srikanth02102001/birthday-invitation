@@ -2,19 +2,13 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MusicPlayer } from "@/components/journey/MusicPlayer";
 import { Starfield } from "@/components/scene1/Starfield";
+import { GiftBox } from "@/components/scene1/GiftBox";
 import { RevealText } from "@/components/scene1/RevealText";
 import { TapToBegin } from "@/components/scene1/TapToBegin";
 import { Petals } from "@/components/scene1/Petals";
 import { useBirthdayAudio } from "@/components/scene1/useAudioLayer";
 
-const GiftBox = lazy(() =>
-  import("@/components/scene1/GiftBox").then(({ GiftBox }) => ({ default: GiftBox })),
-);
-const JourneyDeck = lazy(() =>
-  import("@/components/journey/JourneyDeck").then(({ JourneyDeck }) => ({
-    default: JourneyDeck,
-  })),
-);
+const JourneyDeck = lazy(() => import("@/components/journey/JourneyDeck"));
 
 type Phase = "idle" | "whisper" | "bloom" | "name" | "gift" | "opened" | "finale" | "journey";
 
@@ -123,7 +117,7 @@ function BirthdayExperience() {
                   transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
                   aria-label="with love"
                 >
-                   🧟‍♀️
+                  🧟‍♀️
                 </motion.span>
               </p>
             </motion.div>
@@ -138,18 +132,16 @@ function BirthdayExperience() {
               transition={{ duration: 1.6 }}
               className="absolute inset-0"
             >
-              <Suspense fallback={null}>
-                <GiftBox
-                  opened={phase === "opened"}
-                  onShotStart={() => {
-                    prepareForShot();
-                    startBirthdaySong();
-                  }}
-                  onOpen={() => {
-                    setPhase("opened");
-                  }}
-                />
-              </Suspense>
+              <GiftBox
+                opened={phase === "opened"}
+                onShotStart={() => {
+                  prepareForShot();
+                  startBirthdaySong();
+                }}
+                onOpen={() => {
+                  setPhase("opened");
+                }}
+              />
             </motion.div>
           )}
 
@@ -207,7 +199,15 @@ function BirthdayExperience() {
       </div>
 
       {phase === "journey" && (
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <p className="font-sans text-xs tracking-[0.3em] text-starlight/70 uppercase">
+                Opening your memories
+              </p>
+            </div>
+          }
+        >
           <JourneyDeck muted={muted} />
         </Suspense>
       )}
