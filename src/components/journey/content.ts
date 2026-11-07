@@ -109,6 +109,7 @@ export const myEfforts = {
     "Last time Maa Frnd ki website cheyu strom ante Free ga chedham le mi frnd ey ga ana, ledhu ni pocket money ana avthai money thisuko anav that discribes you as my friend",
     "Nenu Gift ivalsindhi but nuvu odhu antav so I made this website for you. I hope you like my efforts this time .",
     "And Promise ga chepthunna You never find this website anywhere else, because I made it just for you.",
-    "I turned down one job and chose another opportunity, and I have an interview in December. Just pray for me, okay? :)",
+    "Ippudu kuda nuvvu chiraku padthav emo 😐 anipisthundhi, I Hope ................................",
+    "Manasa I dont know your side of me, but my side of you always been special to me. Nenu niku oka bad person ni kavochu for some reasons but nuvu anukune antha Matram Kadey 😐",
   ],
 };

@@ -153,7 +153,7 @@ export function Fireworks({ active, onComplete }: { active: boolean; onComplete:
           animation: `birthday-name-reveal ${FIREWORKS_DURATION_MS / 1000}s ease-in-out 0.2s both`,
         }}
       >
-        MANASA999
+        MANASA99
       </h1>
     </div>,
     document.body,

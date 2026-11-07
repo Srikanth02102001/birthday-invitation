@@ -29,7 +29,7 @@ describe("Fireworks", () => {
   it("shows a sustained sequence of eight fireworks and a cake-positioned name reveal", () => {
     const markup = renderToStaticMarkup(<Fireworks active onComplete={() => {}} />);
 
-    expect(markup).toContain("MANASA999");
+    expect(markup).toContain("MANASA99");
     expect(markup).toContain("left-1/2 top-[58%]");
     expect(markup).toContain(`birthday-name-reveal ${FIREWORKS_DURATION_MS / 1000}s`);
     expect(markup.match(/class="birthday-rocket/g)).toHaveLength(8);
