@@ -6,7 +6,7 @@ interface Env {
 
 // Add your approved public IP addresses here
 const ALLOWED_IPS = new Set([
-  "103.183.203.110"
+  "106.192.0.238"
 ]);
 
 export default {
@@ -17,7 +17,7 @@ export default {
 
     // Block unauthorized visitors
     if (!visitorIP || !ALLOWED_IPS.has(visitorIP)) {
-      return new Response("403 - Access Denied", {
+      return new Response("403 - Access Denied HaHa open avadhuu", {
         status: 403,
         headers: {
           "Content-Type": "text/plain",
