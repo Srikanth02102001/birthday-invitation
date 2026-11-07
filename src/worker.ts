@@ -17,7 +17,7 @@ export default {
 
     // Block unauthorized visitors
     if (!visitorIP || !ALLOWED_IPS.has(visitorIP)) {
-      return new Response("403 - Access Denied HaHa open avadhuu", {
+      return new Response("403 - Access Denied HaHa open avadhuuu", {
         status: 403,
         headers: {
           "Content-Type": "text/plain",
