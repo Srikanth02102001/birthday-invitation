@@ -110,6 +110,6 @@ export const myEfforts = {
     "Nenu Gift ivalsindhi but nuvu odhu antav so I made this website for you. I hope you like my efforts this time .",
     "And Promise ga chepthunna You never find this website anywhere else, because I made it just for you.",
     "Ippudu kuda nuvvu chiraku padthav emo 😐 anipisthundhi, I Hope ................................",
-    "Manasa I dont know your side of me, but my side of you always been special to me. Nenu niku oka bad person ni kavochu for some reasons but nuvu anukune antha Matram Kadey 😐",
+    "Manasa I dont know your side of me, but my side of you always been special to me. Nenu niku oka bad person ni kavochu for some reasons but nuvu anukune antha Matram Kadhu 😐",
   ],
 };
